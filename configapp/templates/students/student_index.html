@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+{% for item in students %}
+<div>
+    <p>{{item.full_name}}</p>
+    <p>{{item.phone_number}}</p>
+    <p>{{item.email}}</p>
+    <hr>
+</div>
+{% endfor %}
+</body>
+</html>
