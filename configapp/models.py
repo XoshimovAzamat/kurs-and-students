@@ -8,6 +8,9 @@ class Kurs(models.Model):
     created_ed = models.DateTimeField(auto_now_add=True)
     update_ed = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return self.title
+
 class Student(models.Model):
     full_name = models.CharField(max_length=50)
     phone_number = models.CharField(max_length=13)
@@ -15,4 +18,7 @@ class Student(models.Model):
     kurs_id = models.ForeignKey(Kurs, on_delete=models.CASCADE)
     created_ed = models.DateTimeField(auto_now_add=True)
     update_ed = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.full_name
 
